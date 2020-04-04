@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="MVVMDataBinding.CashRegisterControll"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MVVMDataBinding"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <local:BillControll Denomination="One" Quantity="{Binding Path=Ones}"/>
+            <local:BillControll Denomination="Two" Quantity="{Binding Path=Twos}"/>
+            <local:BillControll Denomination="Five" Quantity="{Binding Path=Fives}"/>
+            <local:BillControll Denomination="Ten" Quantity="{Binding Path=Tens}"/>
+            <local:BillControll Denomination="Twenty" Quantity="{Binding Path=Twenties}"/>
+            <local:BillControll Denomination="Fifty" Quantity="{Binding Path=Fifties}"/>
+            <local:BillControll Denomination="Hundred" Quantity="{Binding Path=Hundreds}"/>
+
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <local:ConiControll Denomination="Penny" Quantity="{Binding Path=Pennies}"/>
+            <local:ConiControll Denomination="Nickel" Quantity="{Binding Path=Nickels}"/>
+            <local:ConiControll Denomination="Dime" Quantity="{Binding Path=Dimes}"/>
+            <local:ConiControll Denomination="Quarter" Quantity="{Binding Path=Quarters}"/>
+            <local:ConiControll Denomination="HalfDollar" Quantity="{Binding Path=HalfDollars}"/>
+            <local:ConiControll Denomination="Dollar" Quantity="{Binding Path=Dollars}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

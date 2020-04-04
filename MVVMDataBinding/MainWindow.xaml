@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <local:CashRegisterControll>
+            <local:CashRegisterControll.DataContext>
+                <local:CashRegisterModelView/>
+            </local:CashRegisterControll.DataContext>
+        </local:CashRegisterControll>
     </Grid>
 </Window>
